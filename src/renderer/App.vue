@@ -1,26 +1,24 @@
 <template>
   <Layout>
     <Layout>
-      <Sider hide-trigger :width="240" class="root-sider">
+      <!-- <Sider hide-trigger :width="240" class="root-sider">
         <Input icon="ios-search" placeholder="在此页面搜索..." style="width: 100%" @on-change="searchUpdate" @on-focus="activeSearch" @on-blur="deactiveSearch"></Input>
         <Menu :theme="app_config.theme || 'light'" mode="vertical" @on-select="menuNavi" :active-name="activeName || 'index'">
           <MenuItem name="index" ><Icon type="ios-home-outline"></Icon>首页</MenuItem>
           <MenuItem name="detail" ><Icon type="ionic"></Icon>电影详情</MenuItem>
           <MenuItem name="settings"><Icon type="ios-toggle-outline"></Icon>设置</MenuItem>
         </Menu>
-      </Sider>
+      </Sider> -->
       <Content class="root-content">
         <router-view></router-view>
       </Content>
     </Layout>
-    <Footer style="text-align:center">Copyright © 2015-2018 jackz.cn All Rights Reserved.</Footer>
-    <core-sev></core-sev>
+    <Footer style="text-align:center">Copyright © 2015-2020 jackz.cn All Rights Reserved.</Footer>
   </Layout>
 </template>
 
 <script>
 import { mapState, mapActions } from "vuex";
-import coreSev from "./components/CoreService.vue";
 
 export default {
   name: "main-layout",
@@ -55,9 +53,6 @@ export default {
   },
   mounted() {
     this.$set(this, "activeName", this.$route.path.slice(1));
-  },
-  components: {
-    coreSev
   }
 };
 </script>
@@ -75,7 +70,6 @@ export default {
 
 .root-content {
   padding: 12px;
-  margin-left: 240px;
   height: calc(100vh - 69px);
   overflow: auto;
   cursor: default;

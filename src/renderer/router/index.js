@@ -15,16 +15,16 @@ export default new Router({
       name: 'index-page#full',
       component: require('@/components/IndexPage').default
     },
-    {
-      path: '/settings',
-      name: 'setting-page',
-      component: require('@/components/SettingPage').default
-    },
-    {
-      path: '/detail',
-      name: 'detail-page',
-      component: require('@/components/DetailPage').default
-    },
+    // {
+    //   path: '/settings',
+    //   name: 'setting-page',
+    //   component: require('@/components/SettingPage').default
+    // },
+    // {
+    //   path: '/detail',
+    //   name: 'detail-page',
+    //   component: require('@/components/DetailPage').default
+    // },
     {
       path: '*',
       redirect: '/'
