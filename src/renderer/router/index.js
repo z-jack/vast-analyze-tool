@@ -20,11 +20,16 @@ export default new Router({
     //   name: 'setting-page',
     //   component: require('@/components/SettingPage').default
     // },
-    // {
-    //   path: '/detail',
-    //   name: 'detail-page',
-    //   component: require('@/components/DetailPage').default
-    // },
+    {
+      path: '/detail',
+      name: 'detail-page',
+      component: require('@/components/DetailPage').default
+    },
+    {
+      path: '/cluster',
+      name: 'cluster-page',
+      component: require('@/components/ClusterPage').default
+    },
     {
       path: '*',
       redirect: '/'

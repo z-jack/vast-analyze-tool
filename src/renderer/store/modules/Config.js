@@ -1,11 +1,24 @@
 import Vue from "vue";
 import fs from "fs";
 
+function loadMVConfig() {
+  const config = JSON.parse(
+    fs.readFileSync("static/data/mv_data.json").toString("utf8")
+  );
+  config.papers.forEach((paper) => {
+    paper.views = JSON.parse(
+      fs.readFileSync(`static/data/mv_data/${paper.json}`).toString("utf8")
+    );
+  });
+  return config;
+}
+
 const state = {
   app_config: JSON.parse(
     fs.readFileSync("static/data/config.json").toString("utf8")
   ),
   tmp_config: {},
+  mv_config: loadMVConfig(),
 };
 
 const mutations = {

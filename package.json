@@ -54,8 +54,11 @@
     "axios": "^0.16.1",
     "file-url": "^2.0.2",
     "fs": "0.0.1-security",
-    "iview": "^2.9.2",
+    "iview": "^2.14.3",
     "md5": "^2.2.1",
+    "numeric": "^1.2.6",
+    "pca-js": "^1.0.2",
+    "tsne-js": "^1.0.3",
     "underscore": "^1.8.3",
     "util.promisify": "^1.0.0",
     "vue": "^2.3.3",
@@ -100,6 +103,7 @@
     "vue-template-compiler": "^2.4.2",
     "webpack": "^3.5.2",
     "webpack-dev-server": "^2.7.1",
-    "webpack-hot-middleware": "^2.18.2"
+    "webpack-hot-middleware": "^2.18.2",
+    "webpack-node-externals": "^2.5.0"
   }
 }
